@@ -6,9 +6,19 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
   padding: 0;
+}
+
+h2 {
+	font-size: 3rem;
+	margin-bottom: 1em;
 }
 
 
@@ -59,13 +69,16 @@ section {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url("https://www.denverpost.com/wp-content/uploads/2017/02/d-day-color-photos-29.jpg?w=978");
+	background-image: url("./d-day.jpg");
 	width: 100%;
 	height: 100%;
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+}
+
+@media (pointer:none), (pointer:coarse) {
+	.cover {
+		background-attachment: local;
+	}
 }
 
 #pinContainer {
@@ -85,6 +98,7 @@ section {
   height: 100%;
   width: calc(100/900*100%); /* relative to parent -> 25% of 400% = 100% of window width */
   float: left;
+  overflow:hidden;
 }
 
 .blue {

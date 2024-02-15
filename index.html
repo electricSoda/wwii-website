@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="./slider.css">
 </head>
 <body>
 	<main class="full-screen" role="main">
@@ -25,10 +26,33 @@
 		<div id="pinContainer">
 			<div id="slideContainer">
 				<section class="panel blue" id="blue">
-					<h3>Section 1: WWII Timeline</h3>
-					<div>
-						<u>September 1, 1939 World War II Begins</u>
-						<p>WWII officially began when Germany invaded Poland. Britain and France, who were both allied with Poland at the time, declared war on Germany in response.</p>
+					<h2>Section 1: WWII Timeline</h2>
+					 <!-- slider container -->
+					<div class="slider">
+
+						<div class="slide">
+							<div class="card">
+								<img src="https://cdn.theatlantic.com/thumbor/L4RPLHSXqN7CYO4FhA2rvbfdpsY=/900x622/media/img/photo/2011/06/world-war-ii-the-invasion-of-poland-and-the-winter/w09_3b45298u/original.jpg" alt="img" style="width:100%; max-height:40%;">
+								<div class="container">
+								  <h4><b>September 1, 1939: World War II Begins</b></h4>
+								  <p>WWII officially began when Germany invaded Poland. Britain and France, who were both allied with Poland at the time, declared war on Germany in response.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slide">
+							<div class="card">
+								<img src="https://cdn.theatlantic.com/thumbor/L4RPLHSXqN7CYO4FhA2rvbfdpsY=/900x622/media/img/photo/2011/06/world-war-ii-the-invasion-of-poland-and-the-winter/w09_3b45298u/original.jpg" alt="img" style="width:100%; max-height:40%;">
+								<div class="container">
+								  <h4><b>November 17, 1939: Soviet Union Invades Poland</b></h4>
+								  <p>The Soviet Union invaded Poland because of a secret pact that Russia and Germany had made giving to Poland less hope because Russia said that Poland had taken a chunk of land on the eastern side and Russia said that Poland had annexed that part Illegally. The Soviet Union invaded Poland to protect the Belorussians and Ukrainians in the east from Nazi’s Germany 16 days after they invaded Poland from the west. </p>
+								</div>
+							</div>
+						</div>
+				
+						<!-- Control buttons -->
+						<button class="btn btn-next">></button>
+						<button class="btn btn-prev"><
 					</div>
 				</section>
 				<section class="panel turqoise" id="turqoise">
@@ -59,5 +83,6 @@
 		</div>  
 	</main>
 	<script src="./main.js"></script>
+	<script src="./slider.js"></script>
 </body>
 </html>
