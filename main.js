@@ -30,30 +30,29 @@ $(function () { // wait for document ready
     // define movement of panels
     var wipeAnimation = new TimelineMax()
 
-	for (var i=1; i<=document.getElementById("slideContainer").childElementCount-1; i++) {
+    var count = document.getElementById("slideContainer").childElementCount;
+
+	for (var i=1; i<count; i++) {
 		wipeAnimation
-		.to("#slideContainer", 5, {delay: i*8000, pin:true})
-		.to("#slideContainer", 45*500, {z: -35})		// move back in 3D space
-        .to("#slideContainer", 60*500,   {x: "-" + i*1/9*100 + "%"})	// move in to first panel
-        .to("#slideContainer", 45*500, {z: 0})				// move back to origin in 3D space
+		.to("#slideContainer", 5, {delay: i*10, pin:true})
+		.to("#slideContainer", 5, {z: -35})		// move back in 3D space
+        .to("#slideContainer", 8,   {x: "-" + i*1/count*100 + "%"})	// move in to first panel
+        .to("#slideContainer", 5, {z: 0})				// move back to origin in 3D space
 	}
 
     // create scene to pin and link animation
     new ScrollMagic.Scene({
             triggerElement: "#pinContainer",
-            triggerHook: 0,
+            triggerHook: "onLeave",
             duration: "1000%"
         })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)
-        // .addIndicators()
         .addTo(controller);
-	
 
-    
 	smoothScroll({ frameRate        : 150, // [Hz]
-    animationTime    : 11111000, // [px]
-    stepSize         : 50, // [px]
-    });
+					animationTime    : 11111000, // [px]
+					stepSize         : 50, // [px]
+	});
 
 });

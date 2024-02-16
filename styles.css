@@ -3,6 +3,7 @@ body {
   margin: 0;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior: none;
 }
 
 h1,
@@ -29,11 +30,6 @@ header {
   text-align: center;
   color: #EFEFEF;
   z-index: 1;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 section {
@@ -91,14 +87,20 @@ section {
 }
 #slideContainer {
 	position: fixed;
-  width: 900%; /* to contain 9 panels, each with 100% of window width */
+  width: 1000%; /* to contain 9 panels, each with 100% of window width */
   height: 100%;
+  overscroll-behavior: none;
+  display: flex;
+  flex-wrap: nowrap;
 }
+
+
 .panel {
   min-height: 100%;
-  width: calc(100/900*100%); /* relative to parent -> 25% of 400% = 100% of window width */
+  width: calc(100/1000*100%); /* relative to parent -> 25% of 400% = 100% of window width */
   float: left;
   overflow:hidden;
+  text-align: center;
 }
 
 .blue {
