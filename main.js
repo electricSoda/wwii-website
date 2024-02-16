@@ -33,7 +33,7 @@ $(function () { // wait for document ready
 	for (var i=1; i<=document.getElementById("slideContainer").childElementCount-1; i++) {
 		wipeAnimation
 		.to("#slideContainer", 5, {delay: i*8000, pin:true})
-		.to("#slideContainer", 45*500, {z: -100})		// move back in 3D space
+		.to("#slideContainer", 45*500, {z: -35})		// move back in 3D space
         .to("#slideContainer", 60*500,   {x: "-" + i*1/9*100 + "%"})	// move in to first panel
         .to("#slideContainer", 45*500, {z: 0})				// move back to origin in 3D space
 	}
@@ -46,11 +46,14 @@ $(function () { // wait for document ready
         })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)
+        // .addIndicators()
         .addTo(controller);
+	
 
+    
 	smoothScroll({ frameRate        : 150, // [Hz]
-					animationTime    : 11111000, // [px]
-					stepSize         : 50, // [px]
-	});
+    animationTime    : 11111000, // [px]
+    stepSize         : 50, // [px]
+    });
 
 });
