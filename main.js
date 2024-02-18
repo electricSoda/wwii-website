@@ -34,7 +34,7 @@ $(function () { // wait for document ready
 
 	for (var i=1; i<count; i++) {
 		wipeAnimation
-		.to("#slideContainer", 5, {delay: i*10, pin:true})
+		.to("#slideContainer", 5, {delay: i, pin:true})
 		.to("#slideContainer", 5, {z: -35})		// move back in 3D space
         .to("#slideContainer", 8,   {x: "-" + i*1/count*100 + "%"})	// move in to first panel
         .to("#slideContainer", 5, {z: 0})				// move back to origin in 3D space
