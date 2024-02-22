@@ -30,8 +30,8 @@ $(function () { // wait for document ready
     // define movement of panels
     var wipeAnimation = new TimelineMax()
 
-    var count = document.getElementById("slideContainer").childElementCount;
-
+    var count = document.querySelectorAll("section").length;
+    console.log(count);
 	for (var i=1; i<count; i++) {
 		wipeAnimation
 		.to("#slideContainer", 5, {delay: i, pin:true})
@@ -44,7 +44,7 @@ $(function () { // wait for document ready
     new ScrollMagic.Scene({
             triggerElement: "#pinContainer",
             triggerHook: "onLeave",
-            duration: "1900%"
+            duration: "2600%"
         })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)

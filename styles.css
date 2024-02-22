@@ -86,12 +86,12 @@ section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  -webkit-perspective: 2500; /* CHANGE THIS TO BE THE WIDTH - 100*/
-          perspective: 2500;
+  -webkit-perspective: 2500; /* change to be width-100*/
+          perspective: 2500; /* change to be width-100*/
 }
 #slideContainer {
 	position: fixed;  
-  width: calc(var(--width)*1%); /* to contain 19 panels, each with 100% of window width */
+  width: calc(var(--width)*1%); 
   height: 100%;
   overscroll-behavior: none;
   display: flex;
