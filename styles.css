@@ -1,5 +1,5 @@
 :root {
-  --width:  2600;
+  --width:  3100;
 }
 
 html,
@@ -86,8 +86,8 @@ section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  -webkit-perspective: 2500; /* change to be width-100*/
-          perspective: 2500; /* change to be width-100*/
+  -webkit-perspective: 3000; /* change to be width-100*/
+          perspective: 3000; /* change to be width-100*/
 }
 #slideContainer {
 	position: fixed;  
