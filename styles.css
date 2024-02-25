@@ -1,5 +1,5 @@
 :root {
-  --width:  3100;
+  --width:  3200;
 }
 
 html,
@@ -19,6 +19,10 @@ h6,
 p {
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-size: 1.25em;
 }
 
 h2 {
