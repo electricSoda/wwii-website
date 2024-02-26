@@ -44,7 +44,7 @@ $(function () { // wait for document ready
     new ScrollMagic.Scene({
             triggerElement: "#pinContainer",
             triggerHook: "onLeave",
-            duration: "3100%"
+            duration: "3300%"
         })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)
